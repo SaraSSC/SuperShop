@@ -58,7 +58,8 @@ namespace SuperShop.Controllers
 
 
         // GET: Products/Create
-        [Authorize]
+        //NOTE: This is what gives the users the authorizations to do the stuff, afeter the Roles add a comma  to include the other users the same privileges
+        [Authorize(Roles ="Admin")]
         public IActionResult Create()
         {
             return View();
