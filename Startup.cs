@@ -54,6 +54,11 @@ namespace SuperShop
 
 			services.AddScoped<IProductRepository, ProductRepository>();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/NotAuthorized";
+                options.AccessDeniedPath = "/Account/NotAuthorized";
+            });
 
             services.AddControllersWithViews();
         }
@@ -71,6 +76,8 @@ namespace SuperShop
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseStatusCodePagesWithRedirects("/error/{0}");
 
             //NOTE: The services need to be in this order for the app to work
             app.UseHttpsRedirection();
