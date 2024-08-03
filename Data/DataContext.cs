@@ -19,7 +19,7 @@ namespace SuperShop.Data
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
-        public DbSet<OrderDetailTemp> OrderDetailTemp { get; set; }
+        public DbSet<OrderDetailTemp> OrderDetailTemp { get; set; } //OrderDetailsTemp is the way I shuld have put it before the migration
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
