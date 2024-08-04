@@ -35,9 +35,6 @@ namespace SuperShop.Data.Entities
 
         [Display(Name = "Order date")]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy HH:mm}", ApplyFormatInEditMode = false)]
-
-        //  This gives an error(FormatException)
-        //  public DateTime? OrderDateLocal => this.OrderDate == null ? null : this.OrderDate.ToLocalTime();
         public DateTime? OrderDateLocal => this.OrderDate == null ? (DateTime?)null : this.OrderDate.ToLocalTime();
     }
 }
