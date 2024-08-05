@@ -22,10 +22,17 @@ namespace SuperShop.Data
 
         public DbSet<OrderDetailTemp> OrderDetailTemp { get; set; } //OrderDetailsTemp is the way I shuld have put it before the migration
 
+        public DbSet<Country> Countries { get; set; }
+
+        public DbSet<City> Cities { get; set; }
+
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
         }
+
+        
 
         /* Allow to change the behavior of the delete operation in the database (deleting in cascade rule*/
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
