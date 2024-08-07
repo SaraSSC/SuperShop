@@ -47,15 +47,15 @@ namespace SuperShop.Data
                 await _context.SaveChangesAsync();
             }
 
-            var user = await _userHelper.GetUserByEmailAsync("testemail@gmail.com");
+            var user = await _userHelper.GetUserByEmailAsync("testemailcoder@gmail.com");
             if (user == null) 
             {
                 user = new User
                 {
                     FirstName = "Sara",
                     LastName = "Carvalho",
-                    Email = "testemail@gmail.com",
-                    UserName = "testemail@gmail.com",
+                    Email = "testemailcoder@gmail.com",
+                    UserName = "testemailcoder@gmail.com",
                     PhoneNumber = "1234567890",
                     Address = "Rua Jau 33",
                     CityId = _context.Countries.FirstOrDefault().Cities.FirstOrDefault().Id,
