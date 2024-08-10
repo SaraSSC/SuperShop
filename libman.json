@@ -7,9 +7,13 @@
 			"destination": "wwwroot/lib/font-awesome/"
 		},
 		{
-			"provider": "cdnjs",
 			"library": "bootstrap-datepicker@1.10.0",
 			"destination": "wwwroot/lib/bootstrap-datepicker/"
+		},
+		{
+			"provider": "cdnjs",
+			"library": "datatables.net@2.1.3",
+			"destination": "wwwroot/lib/datatables.net/"
 		}
 	]
 }

@@ -36,7 +36,7 @@ namespace SuperShop.Controllers
 
         public IActionResult Login()
         {
-            if (User.Identity.IsAuthenticated) 
+            if (User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -47,12 +47,12 @@ namespace SuperShop.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var result = await _userHelper.LoginAsync(model);
-                if ( result.Succeeded)
+                if (result.Succeeded)
                 {
-                    if(this.Request.Query.Keys.Contains("ReturnUrl"))
+                    if (this.Request.Query.Keys.Contains("ReturnUrl"))
                     {
                         return Redirect(this.Request.Query["ReturnUrl"].First());
                     }
@@ -125,13 +125,13 @@ namespace SuperShop.Controllers
 
                     if (response.IsSuccess)
                     {
-                       ViewBag.Message = "The instructions to allow your user has been sent to email.";
+                        ViewBag.Message = "The instructions to allow your user has been sent to email.";
                         return View(model);
                     }
 
                     ModelState.AddModelError(string.Empty, "The user couldn't be logged");
                 }
-               
+
             }
 
             return View(model);
@@ -141,18 +141,18 @@ namespace SuperShop.Controllers
         {
             var user = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
             var model = new ChangeUserViewModel();
-            if(user != null)
+            if (user != null)
             {
                 model.FirstName = user.FirstName;
                 model.LastName = user.LastName;
                 model.Address = user.Address;
                 model.PhoneNumber = user.PhoneNumber;
-                
+
                 var city = await _countryRepository.GetCityAsync(user.CityId);
-                if(city != null)
+                if (city != null)
                 {
                     var country = await _countryRepository.GetCountryAsync(city);
-                    if(country != null)
+                    if (country != null)
                     {
                         model.CountryId = country.Id;
                         model.Cities = _countryRepository.GetComboCities(country.Id);
@@ -172,7 +172,7 @@ namespace SuperShop.Controllers
         [HttpPost]
         public async Task<IActionResult> ChangeUser(ChangeUserViewModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var user = await _userHelper.GetUserByEmailAsync(this.User.Identity.Name);
 
@@ -194,10 +194,10 @@ namespace SuperShop.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty,response.Errors.FirstOrDefault().Description);
+                        ModelState.AddModelError(string.Empty, response.Errors.FirstOrDefault().Description);
                     }
                 }
-            } 
+            }
 
             return View(model);
         }
@@ -297,13 +297,13 @@ namespace SuperShop.Controllers
 
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
-            if(string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
+            if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
             {
                 return NotFound();
             }
 
             var user = await _userHelper.GetUserByIdAsync(userId);
-            if(user == null)
+            if (user == null)
             {
                 return NotFound();
             }
@@ -316,6 +316,76 @@ namespace SuperShop.Controllers
 
             return View();
 
+        }
+
+        public IActionResult RecoverPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RecoverPassword(RecoverPasswordViewModel model)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var user = await _userHelper.GetUserByEmailAsync(model.Email);
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "The email doesn't correspond to a registered user.");
+
+                    return View(model);
+                }
+
+                var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
+
+                var link = this.Url.Action(
+                    "ResetPassword",
+                    "Account",
+                    new { token = myToken },
+                    protocol: HttpContext.Request.Scheme);
+
+                Response response = _mailHelper.SendEmail(model.Email, "Shop Password Reset", $"<h1>Shop Password Reset</h1>" +
+                    $"To reset the password click in this link:<br><br>" +
+                    $"<a href=\"{link}\">Reset Password</a>");
+
+                if (response.IsSuccess)
+                {
+                    this.ViewBag.Message = "The instructions to recover your password has been sent to your email.";
+                }
+
+                return this.View();
+            }
+
+            return this.View(model);
+        }
+
+
+        public IActionResult ResetPassword(string token)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            var user = await _userHelper.GetUserByEmailAsync(model.Username);
+            if (user != null)
+            {
+                var result = await _userHelper.ResetPasswordAsync(
+                    user, model.Token,
+                    model.Password);
+
+                if (result.Succeeded)
+                {
+                    this.ViewBag.Message = "Password reset successful.";
+                }
+
+                this.ViewBag.Message = "Error resetting the password.";
+                return View(model);
+            }
+
+            this.ViewBag.Message = "User not found.";
+            return View(model);
         }
     }
 }
