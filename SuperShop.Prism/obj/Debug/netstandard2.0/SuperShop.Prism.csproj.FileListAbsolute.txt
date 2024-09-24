@@ -1,0 +1,14 @@
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.csproj.AssemblyReference.cache
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.AssemblyInfoInputs.cache
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.AssemblyInfo.cs
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.csproj.CoreCompileInputs.cache
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\bin\Debug\netstandard2.0\SuperShop.Prism.deps.json
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\bin\Debug\netstandard2.0\SuperShop.Prism.dll
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\bin\Debug\netstandard2.0\SuperShop.Prism.pdb
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\Views\ProductsPage.xaml.g.cs
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.dll
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism\obj\Debug\netstandard2.0\SuperShop.Prism.pdb
