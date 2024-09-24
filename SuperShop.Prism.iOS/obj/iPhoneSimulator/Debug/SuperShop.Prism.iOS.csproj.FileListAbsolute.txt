@@ -1,0 +1,13 @@
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\actool\_ProcessedImageAssetsPath.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedBundleResourcesPath.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\_ProcessedContentPath.items
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\SuperShop.Prism.iOS.csproj.AssemblyReference.cache
+C:\Users\ROG\OneDrive\Documentos\CINEL-CET\5423-Acesso_Movel_SI\SuperShop.Prism\SuperShop.Prism.iOS\obj\iPhoneSimulator\Debug\SuperShop.Prism.iOS.csproj.CoreCompileInputs.cache
